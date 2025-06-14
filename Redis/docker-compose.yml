@@ -1,0 +1,13 @@
+services:
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"
+    command: ["redis-server", "--appendonly", "no"]
+
+  redisinsight:
+    image: redis/redisinsight:latest
+    depends_on:
+      - redis
+    ports:
+      - "8001:8001"

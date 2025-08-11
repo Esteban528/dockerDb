@@ -1,2 +1,5 @@
 ./MySQL/data
 ./Mongo/mongodb_data/
+data
+rs_keyfile
+secrets/

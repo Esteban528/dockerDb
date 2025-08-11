@@ -1,0 +1,16 @@
+services:
+  mongo:
+    build: .
+    volumes:
+      - ./rs_keyfile:/keyfile/rs_keyfile:ro
+      - ./init.js:/docker-entrypoint-initdb.d/init.js
+      - mongo1_data:/data/db
+    ports:
+      - "27017:27017"
+    # restart: unless-stopped
+    # environment:
+    #   MONGO_INITDB_ROOT_USERNAME: root
+    #   MONGO_INITDB_ROOT_PASSWORD: 12345678
+
+volumes:
+  mongo1_data:

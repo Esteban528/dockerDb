@@ -20,3 +20,6 @@ make down
 - Each target runs `docker compose up` in its folder.
 - `down` stops all containers.
 
+# Deps
+- `docker/podman`
+- `gnumake`
